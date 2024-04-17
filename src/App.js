@@ -1,25 +1,82 @@
-import logo from './logo.svg';
-import './App.css';
+import Accordian from './components/accordian';
+// import Treeview from './components/tree-view';
+import GithubProfileFinder from './components/git-profile-finder';
+// import { BrowserRouter } from "react-router-dom";
+// import { Accordian, Treeview, GithubProfileFinder,Navbar} from "./components";
+// import menus from "./components/tree-view/data"
+import ScrollToTopAndBottom from "./components/scroll-to-top-and-bottom";
+import ScrollToSection from "./components/scroll-to-top-and-bottom/scroll-to-sections";
+import LoadMoreProducts from "./components/Load-more-product";
+import ShowPaintingDisplay from "./components/show-wall-painting-card";
+import ShowPaintingOnFlip from "./components/show-wall-painting-onpopup";
+import ShowPaintingOnPopup from "./components/show-wall-painting-onpopup";
+import ShowPaintingOnFlipCard from "./components/show-wall-painting-flipcard";
+import ButtonAnimation from "./components/buttonCircle";
+
 
 function App() {
+
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div> 
+    {/* <BrowserRouter> */}
+      <div className="App">
+
+
+
+
+        <div>
+          {/* Accordian component */}
+          {/* <Accordian /> */}
+
+          {/*  Tree view component/menu UI component / recursive navigation menu  */}
+          {/* <Treeview menus={menus} /> */}
+
+          {/* Github Profile Finder */}
+          {/* <GithubProfileFinder /> */}
+
+         
+         
+         
+
+{/* Load more products when button with more clicked */}
+           <LoadMoreProducts/>
+
+
+{/* Load more products with button  */}
+
+
+
+{/* button animation */}
+            <ButtonAnimation/>
+
+
+{/* image with card on click */}
+
+{/* <ShowPaintingDisplay/>  */}
+
+{/* show wall paintig on flip */}
+{/* <ShowPaintingOnFlip/> */}
+
+
+<ShowPaintingOnPopup/>
+
+<ShowPaintingOnFlipCard/>
+
+
+
+ {/* Scroll Up and Down */}
+          <ScrollToTopAndBottom/>
+
+            {/* Scroll To Particular Section */}
+            {/* <ScrollToSection/> */}
+        </div>
+      </div>
+    {/* </BrowserRouter> */}
     </div>
   );
 }
 
 export default App;
+

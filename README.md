@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+<h1 align="center"> $\textcolor{BLUE}{SHORT\ REACTJS\ PROJECTS\ }$
+</h1>
+<details>
+<summary>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### $\color{cyan}{Libraries\ used}$
 
-## Available Scripts
+ </summary>
 
-In the project directory, you can run:
+- $\color{lightgreen}{React\ Icons}$
 
-### `npm start`
+> `npm install react-icons --save`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> `npm i react-router-dom`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> `npm i react-dom`
 
-### `npm test`
+> `npm i axios`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Using dummy data
 
-### `npm run build`
+`https://dummyjson.com/` API
+  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+</details>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## $\textcolor{orange}{Projects\ List\ }$
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<details>
+<summary>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### $\color{cyan}{Accodian}$
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ </summary>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ Upon selection of the content colapses and clicking back will close the colapseable content.
 
-### Code Splitting
+- $\color{lightgreen}{Multi\ Seletion}$ -   will allow user to view multiple content.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- $\color{lightgreen}{Single\ Seletion}$ -   will allow user to view one content at a time.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+</details>
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<details>
+<summary>
 
-### Advanced Configuration
+### $\color{cyan}{Tree-view}$
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ </summary>
 
-### Deployment
+ Side bar navigation drop down nested chld option view.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- $\color{lightgreen}{Click\ ▾}$ -   View nested child for more options to select.
 
-### `npm run build` fails to minify
+- $\color{lightgreen}{Click\ ▴}$ -   Close nested options.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+</details>
+
+
+
+<details>
+<summary>
+
+### $\color{cyan}{Github-Profile-Finder}$
+
+
+ </summary>
+
+ Search for github profile.
+
+- $\color{lightgreen}{Input\ name}$ -  Summary of of profile display and not found will be displayed when there is no profile.
+
+
+</details>
+
+
+

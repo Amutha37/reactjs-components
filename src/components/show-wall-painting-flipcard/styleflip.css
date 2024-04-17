@@ -1,0 +1,195 @@
+
+
+
+/* commision file style */
+
+.commission-images-row {
+  /* margin-right: auto;
+  margin-left: auto; */
+  width: 85%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 2rem;
+  /* gap: 7px; */
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+ /* flex-flow: wrap; */
+}
+
+.commission-image-columnn {
+  position: relative;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10rem;
+}
+.commission-images-row  img {
+  text-align: center;
+  vertical-align: middle;
+  width: 250px;
+  height: 250px;
+  
+}
+
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+  
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* box-shadow: rgba(11, 11, 11, 0.619) 0px 22px 70px 4px; */
+    /* border: 1px solid #f1f1f1; */
+    /* perspective: 1000px; Remove this if you don't want the 3D effect */
+    transition: transform .2s; /* Animation */
+ 
+  }
+  
+  .flip-card:hover{
+
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+z-index: 1;
+  }
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+   
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+
+  .flip-card .flip-card-inner.flip {
+    transform: rotateY(180deg);
+
+  }
+  
+  .flip-card .flip-card-inner.hover {
+    transform: scale(1.5);
+  }
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+ 
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  /* .flip-card-back img {
+    padding: 5px 5px;
+  } */
+
+   /* BUTTON STYLE AND POSITION */
+   .circle_middle{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgb(116, 122, 121), rgb(204, 213, 208));
+  
+  }
+  
+  .circle_small {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: #ddd;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 0;
+    background: rgb(19, 228, 235);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: scale(1);
+    animation: pulsetransition 3s infinite;
+    font-weight: 700;
+    font-size: 20px;
+    color: #0a0a0a;
+  }
+
+
+  .circle_small-pulse {
+   height: 35px;
+   width: 35px;
+   border-radius: 50%;
+   background: #ddd;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+   border: 0;
+   background: rgb(19, 228, 235);
+   cursor: pointer;
+   transition: all 0.2s ease;
+   transform: scale(1);
+   animation: pulseflip 3s initial ;
+   font-weight: 700;
+   font-size: 20px;
+   color: #0a0a0a;
+ }
+
+  
+  .circle_bigg{
+    position: absolute;
+    top: 140%;
+    left: 37%;
+    background:#fff;
+    border: 5px solid #fff;
+    border-radius: 50px;
+  
+   
+  }
+  .circle_small:hover{
+    border: 3px solid white;
+    }
+
+    @keyframes pulseflip{
+     0% {
+       transform: scale(0.95);
+       box-shadow: 0 0 0 0 rgba(14, 191, 164, 0.7);
+     }
+   
+     70% {
+       transform: scale(1);
+       box-shadow: 0 0 0 12.5px rgba(56, 172, 149, 1);
+     }
+   
+     100% {
+       transform: scale(0.95);
+       box-shadow: 0 0 0 0 rgba(12, 162, 140, 1);
+     }
+   }
+
+ 
