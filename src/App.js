@@ -7,8 +7,6 @@ import GithubProfileFinder from './components/git-profile-finder';
 import ScrollToTopAndBottom from "./components/scroll-to-top-and-bottom";
 import ScrollToSection from "./components/scroll-to-top-and-bottom/scroll-to-sections";
 import LoadMoreProducts from "./components/Load-more-product";
-import ShowPaintingDisplay from "./components/show-wall-painting-card";
-import ShowPaintingOnFlip from "./components/show-wall-painting-onpopup";
 import ShowPaintingOnPopup from "./components/show-wall-painting-onpopup";
 import ShowPaintingOnFlipCard from "./components/show-wall-painting-flipcard";
 import ButtonAnimation from "./components/buttonCircle";
@@ -52,9 +50,6 @@ function App() {
             <ButtonAnimation/>
 
 
-{/* image with card on click */}
-
-{/* <ShowPaintingDisplay/>  */}
 
 {/* show wall paintig on flip */}
 {/* <ShowPaintingOnFlip/> */}

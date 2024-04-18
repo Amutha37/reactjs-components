@@ -46,7 +46,7 @@ bottomref.current.scrollIntoView({behavior: 'smooth'})
       {/* button to scroll to bottom  */}
       <h3>This is the top of the page</h3>
 
-      <button onClick={handleScrollToBottom}>Scroll To Bottom</button>
+      <button className="scroll_button-bottom" onClick={handleScrollToBottom}>Scroll To Bottom</button>
     
 
       <ul style ={{listStyle : 'none'}}>
@@ -56,7 +56,7 @@ bottomref.current.scrollIntoView({behavior: 'smooth'})
       </ul>
 
        {/* button to scroll to top  */}
-      <button onClick={handleScrollToTop}>Scroll To Top</button>
+      <button className="scroll_button-top" onClick={handleScrollToTop}>Scroll To Top</button>
       <div ref={bottomref}></div>
       <h3>This is the bottom of the page</h3>
     </div>
