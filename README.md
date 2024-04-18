@@ -86,7 +86,7 @@
 <details>
 <summary>
 
-### $\color{cyan}{Scroll to top, bottom and specific section }$
+### $\color{cyan}{Scroll-page}$
 
 
  </summary>
@@ -102,7 +102,7 @@
 <details>
 <summary>
 
-### $\color{cyan}{Scroll-page}$
+### $\color{cyan}{Images-on-cards}$
 
 
  </summary>
