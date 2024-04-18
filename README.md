@@ -102,7 +102,7 @@
 <details>
 <summary>
 
-### $\color{cyan}{ Button UX/UI}$
+### $\color{cyan}{Scroll-page}$
 
 
  </summary>
@@ -118,7 +118,7 @@ Popup and fliping image and zoom in.
 <details>
 <summary>
 
-### $\color{cyan}{ Button UX/UI}$
+### $\color{cyan}{ Button - UX/UI}$
 
 
  </summary>
