@@ -1,10 +1,4 @@
-/* .load-more-container {
-    display:  flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
 
-} */
 
 .product-container{
     margin-left:auto auto;
@@ -70,4 +64,29 @@
     cursor: not-allowed;
   }
 
+  /* Media queries for different screen sizes */
+/* Media queries for mobile screen sizes */
+@media (max-width: 600px) {
+    .product {
+      width: calc(100% - 10px); /* Full width minus margin */
+      height: calc(100% - 10px); /* Make it a square */
+    }
+  
+    .product img {
+      height: calc(100% - 40px); /* Height minus padding and text height */
+    padding: 4px 4px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+   
+    }
+    .product p {
+        top: 50%; /* Position text in the middle */
+        transform: translateY(-50%); /* Offset the text by half its height to truly center it */
+        text-align: center;
+    }
+  }
+  
+
+  
   

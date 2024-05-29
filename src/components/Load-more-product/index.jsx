@@ -1,5 +1,4 @@
-import { useEffect, useState} from "react";
-
+import { useEffect, useState } from "react";
 import "./styleload.css";
 
 const LoadMoreProducts = () => {
@@ -7,67 +6,55 @@ const LoadMoreProducts = () => {
   const [productsData, setProductsData] = useState([]);
   const [error, setError] = useState(null);
   const [count, setCount] = useState(0);
-  const [disableButton, setDisableButton] = useState(false);
 
-  //   const { data, error, pending } = useFetch(
-  //          `https://dummyjson.com/products?limit=20&skip=${count === 0 ? 0 : count * 20}`,
-
-  //         )
-
-  //  const ref = useRef();
+  const maxProductCount = 100;
+  const productsPerPage = 10;
 
   async function fetchData() {
+    if (productsData.length >= maxProductCount) {
+      // Already loaded maximum products, no more fetch needed
+      return;
+    }
+
     setLoading(true);
     try {
       const response = await fetch(
-        `https://dummyjson.com/products?limit=20&skip=${
-          count === 0 ? 0 : count * 20
-        }`
+        `https://dummyjson.com/products?limit=${productsPerPage}&skip=${count * productsPerPage}`
       );
-      // waits until the request completes...
 
       if (!response.ok) {
-        const message = `An error has occured: ${response.status}`;
-        throw new Error(message);
+        throw new Error(`An error has occurred: ${response.status}`);
       }
 
       const result = await response.json();
-
-      if (result && result.products && result.products.length) {
-        setProductsData((prevData) => [...prevData, ...result.products]);
-        setLoading(false);
-        // setProductsData(result.products);
-        setError(null);
-        setLoading(false);
+      if (result && result.products) {
+        const newProducts = result.products.slice(0, maxProductCount - productsData.length);
+        setProductsData((prevData) => [...prevData, ...newProducts]);
       }
     } catch (error) {
-      console.log("Fetch error: ", error);
-      setError(`${error}. Some Error Occured`);
-      setLoading(false);
+      setError(`Fetch error: ${error.message}`);
+    } finally {
+      setLoading(false); // Ensure loading is set to false after fetch operation
     }
   }
 
-  console.log("PRODUCT", productsData, "DATA", productsData.length);
-  // get more data when count change
   useEffect(() => {
     fetchData();
   }, [count]);
 
-  // Disable more button when product limits reached it's max
-
-  useEffect(() => {
-    if (productsData && productsData.length === 100) setDisableButton(true);
-  }, [productsData]);
+  const handleLoadMore = () => {
+    if (productsData.length < maxProductCount) {
+      setCount((prevCount) => prevCount + 1);
+    }
+  };
 
   if (loading) {
-    return <div>Loading data ! please wait </div>;
+    return <div>Loading data! Please wait...</div>;
   }
 
-  // const handleMoreProducts = () => {
-  //   setCount(count + 1);
-
-  //   // ref.current.scrollIntoView({behavior: 'smooth'})
-  // };
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div className="load-more-container">
@@ -80,28 +67,19 @@ const LoadMoreProducts = () => {
           </div>
         ))}
       </div>
-      <div className="button-container">
-        <p>
-          count : {count} {productsData.length}
-        </p>
-        {!disableButton ? 
-        <button className="load_button"
-          disable={productsData.length === 100 ? !disableButton : disableButton}
-          onClick={() => setCount(count + 1)}
-        >
-          Load More...{" "}
-        </button> : null}
-
-
-
-     
-        {disableButton ? (
-          <p className="button-disable">Reached Maximum Products to view.</p>
-        ) : null}
-      </div>
+      {productsData.length < maxProductCount && (
+        <div className="button-container">
+          <button className="load_button" onClick={handleLoadMore}>
+            Load More...
+          </button>
+          {productsData.length}
+        </div>
+      )}
+      {productsData.length >= maxProductCount && (
+        <p className="button-disable">All products loaded.</p>
+      )}
     </div>
   );
 };
 
 export default LoadMoreProducts;
-//  className={disableButton ? "button-able" : "button-disable"}

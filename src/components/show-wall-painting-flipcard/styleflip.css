@@ -36,29 +36,17 @@
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-
     background-color: transparent;
     width: 300px;
     height: 200px;
-  
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-    /* box-shadow: rgba(11, 11, 11, 0.619) 0px 22px 70px 4px; */
-    /* border: 1px solid #f1f1f1; */
-    /* perspective: 1000px; Remove this if you don't want the 3D effect */
     transition: transform .2s; /* Animation */
  
   }
   
-  .flip-card:hover{
+ 
 
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
-    transform: scale(1.5); 
-z-index: 1;
-  }
   /* This container is needed to position the front and back side */
   .flip-card-inner {
-   
     position: relative;
     width: 100%;
     height: 100%;
@@ -106,16 +94,16 @@ z-index: 1;
   } */
 
    /* BUTTON STYLE AND POSITION */
-   .circle_middle{
+   .circle_middle2{
     height: 60px;
     width: 60px;
     border-radius: 50%;
     position: relative;
     background-image: linear-gradient(to bottom, rgb(116, 122, 121), rgb(204, 213, 208));
-  
+   
   }
   
-  .circle_small {
+  .circle_small2 {
     height: 35px;
     width: 35px;
     border-radius: 50%;
@@ -126,7 +114,7 @@ z-index: 1;
     left: 0;
     right: 0;
     margin: auto;
-    border: 0;
+    /* border: 0; */
     background: rgb(19, 228, 235);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -135,10 +123,10 @@ z-index: 1;
     font-weight: 700;
     font-size: 20px;
     color: #0a0a0a;
+     
   }
 
-
-  .circle_small-pulse {
+  .circle_small2 {
    height: 35px;
    width: 35px;
    border-radius: 50%;
@@ -154,14 +142,15 @@ z-index: 1;
    cursor: pointer;
    transition: all 0.2s ease;
    transform: scale(1);
-   animation: pulseflip 3s initial ;
+   animation: pulseflipp 3s initial ;
    font-weight: 700;
    font-size: 20px;
    color: #0a0a0a;
+   /* border: 7px solid #aba4a4; */
  }
 
   
-  .circle_bigg{
+  .circle_big2{
     position: absolute;
     top: 140%;
     left: 37%;
@@ -171,25 +160,27 @@ z-index: 1;
   
    
   }
-  .circle_small:hover{
+  .circle_small2 {
     border: 3px solid white;
     }
 
-    @keyframes pulseflip{
-     0% {
-       transform: scale(0.95);
-       box-shadow: 0 0 0 0 rgba(14, 191, 164, 0.7);
-     }
-   
-     70% {
-       transform: scale(1);
-       box-shadow: 0 0 0 12.5px rgba(56, 172, 149, 1);
-     }
-   
-     100% {
-       transform: scale(0.95);
-       box-shadow: 0 0 0 0 rgba(12, 162, 140, 1);
-     }
-   }
+ 
+      @keyframes pulseflipp{
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(14, 191, 164, 0.7);
+        }
+      
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 12.5px rgba(56, 172, 149, 1);
+        }
+      
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(12, 162, 140, 1);
+        }
+      }
+  
 
  

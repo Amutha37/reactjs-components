@@ -48,10 +48,10 @@ const ShowPaintingOnFlipCard = () => {
 
             {/* circle start */}
 
-            <div className="circle_bigg ">
-              <div className="circle_middle">
+            <div className="circle_big2 ">
+              <div className="circle_middle2">
                 <button
-                  className="circle_small"
+                  className="circle_small2"
                   onClick={() => handleSingleSelection(item.id)}
                 >
                   {/* {selected === item.id ? '-' : '+' } */}+

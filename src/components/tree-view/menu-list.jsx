@@ -12,25 +12,25 @@
 
 // export default MenuList;
 
-import MenuItem from "./menu-item";
+// MenuList.js
+import MenuItem from "./menu-item.jsx";
 
-const divstyle = {
-  minHeight : '50vh',
-  width: '450',
+const divStyle = {
+  minHeight: '50vh',
+  width: '450px', // Added 'px' to ensure proper CSS
   background: 'rgb(80,83,219)',
-display: 'column'
-}
- 
-export default function MenuList({ list = [] }) {
+  display: 'flex',
+  flexDirection: 'column'
+};
+
+const MenuList = ({ list = [] }) => {
   return (
-    <ul className="menu-list-container" style={divstyle}>
-     
-     
-
-
-      {list && list.length
-        ? list.map((listItem) => <MenuItem item={listItem} />)
-        : null}
+    <ul className="menu-list-container" style={divStyle}>
+      {list.map((listItem, index) => (
+        <MenuItem key={index} item={listItem} />
+      ))}
     </ul>
   );
-}
+};
+
+export default MenuList;
